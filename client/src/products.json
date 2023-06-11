@@ -1,0 +1,38 @@
+[
+    {
+        "id": 100,
+        "category": "Keyboards",
+        "name": "MX Keys",
+        "image": "#"
+
+    },
+    {
+        "id": 101,
+        "category": "Keyboards",
+        "name": "MX Keys 2",
+        "image": "#"
+
+    },
+    {
+        "id": 102,
+        "category": "Laptops",
+        "name": "Asus",
+        "image": "#"
+
+    },
+    {
+        "id": 103,
+        "category": "Laptops",
+        "name": "Macbook Air",
+        "image": "#"
+
+    },
+    {
+        "id": 105,
+        "category": "Keyboards",
+        "name": "Logitech Keys",
+        "image": "#"
+
+    }
+
+]
