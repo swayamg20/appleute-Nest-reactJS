@@ -26,6 +26,7 @@ function App() {
     <div className="w-100" style={{ maxWidth: '100%' }}>
       <Router>
         <Routes>
+        <Route path="/" element={<Login />} />
           <Route path="/" element={<UserLayout />}>
             <Route
               exact
@@ -34,7 +35,7 @@ function App() {
                 <Dashboard badgeCount={badgeCount} handleClick={handleClick} />
               }
             />
-            <Route path="/" element={<Login />} />
+            
             <Route
               path="/cart"
               element={(

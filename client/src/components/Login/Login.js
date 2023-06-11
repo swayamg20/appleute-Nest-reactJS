@@ -56,6 +56,7 @@ function Login() {
             variant="outlined"
             fullWidth
             required
+            onChange={(e) => setEmail(e.target.value)}
           />
           <TextField
             label="Password"
@@ -64,6 +65,7 @@ function Login() {
             variant="outlined"
             fullWidth
             required
+            onChange={(e) => setPassword(e.target.value)}
           />
           <FormControlLabel
             control={<Checkbox name="checkedB" color="primary" />}
@@ -75,36 +77,14 @@ function Login() {
             variant="contained"
             style={btnstyle}
             fullWidth
+            onClick={handleLogin}
           >
             Sign in
           </Button>
-          <Typography>
-            <Link href="#">Forgot password ?</Link>
-          </Typography>
-          <Typography>
-            {' '}
-            Do you have an account ?
-            <Link href="#">Sign Up</Link>
-          </Typography>
+         
         </Paper>
       </Grid>
 
-      <form onSubmit={handleLogin}>
-        <h3>Login</h3>
-        <input
-          type="text"
-          placeholder="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Log in</button>
-      </form>
     </div>
   );
 }

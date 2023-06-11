@@ -16,6 +16,7 @@ export default function Userlayout() {
 
   const logOut = () => {
     AuthService.logout();
+    window.location.reload(true)
   };
   console.log(localStorage.getItem('user'));
 
@@ -25,8 +26,10 @@ export default function Userlayout() {
     const base64 = base64Url.replace('-', '+').replace('_', '/');
     return JSON.parse(window.atob(base64));
   }
+  if(currentUser)
   localStorage.setItem('userEmail', parseJwt(localStorage.getItem('user')).email);
-  console.log(localStorage.getItem('userEmail'), ' email got it');
+
+  // console.log(localStorage.getItem('userEmail'), ' email got it');
 
   return (
     <div>

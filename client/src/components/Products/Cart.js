@@ -12,6 +12,7 @@ import axios from 'axios';
 
 function Cart({ cart, setCart, handleChange }) {
   const [price, setPrice] = useState(0);
+  const [res, setRes] = useState(false);
   console.log(cart);
 
   const handleRemove = (id) => {
@@ -27,6 +28,7 @@ function Cart({ cart, setCart, handleChange }) {
       description: cart.length,
     }).then((response) => {
       console.log(response.data);
+      setRes(true);
     }).catch((error) => {
       console.log(error);
     });
@@ -135,8 +137,9 @@ function Cart({ cart, setCart, handleChange }) {
           Rs -
           {price}
         </span>
-
+                <br/>
         <Button onClick={handleOrder}>Place Order</Button>
+        {res?<Typography>Order Placed</Typography>:<></>}
       </div>
     </div>
   );
